@@ -1,6 +1,7 @@
 package com.jobs.application;
 
 import com.jobs.domain.Employee;
+import com.jobs.domain.Volunteer;
 import com.jobs.persistence.EmployeeRepository;
 
 public class JobsController {
@@ -17,12 +18,13 @@ public class JobsController {
 	}
 	
 	public void createEmployee(String name, String address, String phone, double salaryPerMonth) throws Exception{		
-		Employee boss = new Employee(name, address, phone,  salaryPerMonth, PaymentFactory.createPaymentRateEmployee());
-		repository.addMember(boss);
+		Employee employee = new Employee(name, address, phone,  salaryPerMonth, PaymentFactory.createPaymentRateEmployee());
+		repository.addMember(employee);
 	}
 
 	public void createManagerEmployee(String name, String address, String phone, double salaryPerMonth) throws Exception{
-		// TODO Auto-generated method stub
+		Employee manager = new Employee(name, address, phone,  salaryPerMonth, PaymentFactory.createPaymentRateEmployee());
+		repository.addMember(manager);
 		
 	}
 
@@ -37,8 +39,9 @@ public class JobsController {
 		return null;
 	}
 
-	public void createVolunteer(String string, String string2, String string3) {
-		// TODO Auto-generated method stub
+	public void createVolunteer(String name, String address, String phone, String description) throws Exception {
+		Volunteer volunteer = new Volunteer(name, address, phone, description);
+		repository.addMember(volunteer);
 		
 	}
 	
