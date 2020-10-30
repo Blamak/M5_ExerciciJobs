@@ -25,5 +25,15 @@ public abstract class AbsStaffMember {
 		COUNTER_MEMBERS++;
 	}
 
+	public String getName() {
+		return name;
+	}
+
+
+	public double getTotalPaid() {
+		return totalPaid;
+	}
+
+	
 	public abstract void pay();
 }
