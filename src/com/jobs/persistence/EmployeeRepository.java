@@ -9,7 +9,7 @@ public class EmployeeRepository {
 
 	private static List<AbsStaffMember> members=new ArrayList<>();
 	
-	public EmployeeRepository(){
+	public EmployeeRepository() {
 		
 	}
 	

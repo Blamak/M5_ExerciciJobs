@@ -10,18 +10,17 @@ public class Main {
 	
 	public static void main(String[] args) throws Exception {
 		
-		controller.createBossEmployee("Pepe Boss", "Direcci贸n molona", "666666666", 100.0);
-		controller.createEmployee("Pedro Employee", "Direcci贸n molona 2", "665266666", 40.0);
-		controller.createEmployee("Laura Employee", "Direcci贸n molona 3", "625266666", 45.0);
-		controller.createVolunteer("Juan Volunteer", "Direcci贸n molona 4", "614266666", "Es buen pavo.");
-		controller.createManagerEmployee("Pedro Employee", "Direcci贸n molona 2", "665226666", 80.0);
-//		
-//		
-		controller.payAllEmployeers();
-//		
+		controller.createBossEmployee("Pepe Boss", "Direcci髇 molona", "666666666", 10000.0);
+		controller.createEmployee("Pedro Employee", "Direcci髇 molona 2", "665266666", 1000.0);
+		controller.createEmployee("Laura Employee", "Direcci髇 molona 3", "625266666", 1200.0);
+		controller.createVolunteer("Juan Volunteer", "Direcci髇 molona 4", "614266666", "he's a very nice guy.");
+		controller.createManagerEmployee("Macarena Manager", "Direcci髇 molona 5", "665226666", 5000.0);
+	
+		controller.payAllEmployees();
+		
 		String allEmployees=controller.getAllEmployees();
 		
-		System.out.println("EMPLOYEES:\n" + allEmployees + " \n");
+		System.out.println("EMPLOYEES:\n\n" + allEmployees + " \n");
 		
 	}
 
