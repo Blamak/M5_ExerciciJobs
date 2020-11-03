@@ -25,6 +25,9 @@ public abstract class AbsStaffMember {
 		COUNTER_MEMBERS++;
 	}
 
+	
+	// ------ Getters and Setters ----- //
+	
 	public int getId() {
 		return id;
 	}
@@ -49,6 +52,10 @@ public abstract class AbsStaffMember {
 		COUNTER_MEMBERS = cOUNTER_MEMBERS;
 	}
 
+	public String getName() {
+		return name;
+	}
+	
 	public void setName(String name) {
 		this.name = name;
 	}
@@ -61,19 +68,14 @@ public abstract class AbsStaffMember {
 		this.phone = phone;
 	}
 
+	public double getTotalPaid() {
+		return totalPaid;
+	}
+	
 	public void setTotalPaid(double totalPaid) {
 		this.totalPaid = totalPaid;
 	}
 
-	public String getName() {
-		return name;
-	}
 
-
-	public double getTotalPaid() {
-		return totalPaid;
-	}
-
-	
 	public abstract void pay();
 }

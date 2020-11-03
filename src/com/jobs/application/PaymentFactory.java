@@ -3,8 +3,10 @@ package com.jobs.application;
 import com.jobs.domain.IPaymentRate;
 
 public class PaymentFactory {
+	/* 
+	 * pay() method being overridden by using the interface IPaymentRate.
+	 */
 
-	
 	public static IPaymentRate createPaymentRateBoss(){
 		return new IPaymentRate() {	
 			@Override

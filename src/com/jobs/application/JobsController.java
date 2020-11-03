@@ -15,6 +15,7 @@ public class JobsController {
 
 	}
 
+	// Staff members that get paid.
 	public void createBossEmployee(String name, String address, String phone, double salaryPerMonth) throws Exception {
 		Employee boss = new Employee(name, address, phone, salaryPerMonth, PaymentFactory.createPaymentRateBoss());
 		repository.addMember(boss);
@@ -34,6 +35,7 @@ public class JobsController {
 
 	}
 
+	// Get employees paid using the IPaymentRate interface (... PaymentFactory)
 	public void payAllEmployees() {
 		List<AbsStaffMember> allEmployees = repository.getAllMembers();
 		for (AbsStaffMember emp : allEmployees) {
@@ -44,7 +46,7 @@ public class JobsController {
 	public String getAllEmployees() {
 		String employeesString = ""; // Text to contain all employees' info.
 		
-		// List to contain all the employees and iterate over.
+		// List to contain all the employees and then iterate over.
 		List<AbsStaffMember> allEmployees = repository.getAllMembers();
 		for (AbsStaffMember emp : allEmployees) {
 			employeesString += "Id: " + emp.getId() + "\n" +
@@ -66,6 +68,7 @@ public class JobsController {
 		return employeesString;
 	}
 
+	// Poor wretch members, good for the company's economy.
 	public void createVolunteer(String name, String address, String phone, String description) throws Exception {
 		Volunteer volunteer = new Volunteer(name, address, phone, description);
 		repository.addMember(volunteer);

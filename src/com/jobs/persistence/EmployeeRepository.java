@@ -6,6 +6,9 @@ import java.util.List;
 import com.jobs.domain.AbsStaffMember;
 
 public class EmployeeRepository {
+	/*
+	 * Store and retrieve company members.
+	 */
 
 	private static List<AbsStaffMember> members=new ArrayList<>();
 	
