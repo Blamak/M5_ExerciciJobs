@@ -3,7 +3,8 @@ package com.jobs.application;
 import com.jobs.domain.IPaymentRate;
 
 public class PaymentFactory {
-	/* 
+	/** 
+	 * 3 methods to manage the payment for each type of employee.
 	 * pay() method being overridden by using the interface IPaymentRate.
 	 */
 

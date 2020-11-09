@@ -35,7 +35,7 @@ public class JobsController {
 
 	}
 
-	// Get employees paid using the IPaymentRate interface (... PaymentFactory)
+	// Make the payment for all the employees using the IPaymentRate interface (... PaymentFactory).
 	public void payAllEmployees() {
 		List<AbsStaffMember> allEmployees = repository.getAllMembers();
 		for (AbsStaffMember emp : allEmployees) {
@@ -43,18 +43,21 @@ public class JobsController {
 		}
 	}
 
+	// Get all members in a list, then return a string with all of them.  
 	public String getAllEmployees() {
 		String employeesString = ""; // Text to contain all employees' info.
 		
-		// List to contain all the employees and then iterate over.
+		// List to contain all the employees.
 		List<AbsStaffMember> allEmployees = repository.getAllMembers();
+		
+		// Iterate over the employees list and create the string that will show the info.
 		for (AbsStaffMember emp : allEmployees) {
 			employeesString += "Id: " + emp.getId() + "\n" +
 							   "Name: " + emp.getName() + "\n" +
 							   "Address: " + emp.getAddress() + "\n" +
 							   "Phone: " + emp.getPhone() + "\n";
 			
-			// Add description if the member is a volunteer
+			// Add description if the member is a volunteer.
 			if (emp instanceof Volunteer) {
 				employeesString += "Total Salary: " + emp.getTotalPaid() +
 						           " - but " + ((Volunteer) emp).description + "\n\n";
